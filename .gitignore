@@ -1,0 +1,32 @@
+# ---- Node / Frontend ----
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ---- Python / Backend ----
+__pycache__/
+*.py[cod]
+*.pyo
+backend/.venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Environment ----
+.env
+.env.*
+!.env.example
+
+# ---- Editor ----
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
