@@ -30,3 +30,16 @@ build/
 # ---- OS ----
 .DS_Store
 Thumbs.db
+
+# Data & models
+studentlife_daily_and_surveys_qh.csv
+backend/nodes_4h.csv
+backend/nodes_daily.csv
+backend/*.pkl
+backend/cluster_info.json
+backend/notes.db
+
+# Python
+backend/__pycache__/
+**/__pycache__/
+*.pyc

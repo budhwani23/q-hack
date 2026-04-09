@@ -1,12 +1,113 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #758976; /* Reseda */
+  --color-primary-600: #5f6f5e; /* darker heading */
+  --color-ash: #A2ABA1; /* Ash Gray */
+  --color-alabaster: #EBE5D9; /* background */
+  --color-thistle: #CCBBDB; /* accent */
+  --color-nearblack: #2f2f2f; /* body text */
+}
+
+html,
+body,
+#root {
+  height: 100%;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: #0f0f13;
-  color: #e8e8f0;
-  min-height: 100vh;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--color-nearblack);
+  background: linear-gradient(180deg, var(--color-alabaster) 0%, #f6f1e6 100%);
+  background-image:
+    radial-gradient(circle at 15% 85%, rgba(117,137,118,0.06) 0%, transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(204,187,219,0.04) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+/* Subtle grain overlay for texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-600);
+}
+
+/* Card utility */
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+
+/* Smooth transitions */
+.transition-smooth { transition: all 150ms ease; }
+
+/* Buttons */
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 16px;
+}
+.btn-primary:hover { background: var(--color-primary-600); }
+.btn-secondary { background: var(--color-thistle); color: var(--color-nearblack); border-radius: 10px; padding: 10px 16px; }
+
+/* Inputs */
+.input-base { background: #fff; border: 1px solid #dcdcdc; border-radius: 10px; padding: 10px 12px; }
+.input-base:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 6px rgba(117,137,118,0.12); }
+
+/* React Flow dark overrides */
+.react-flow__renderer {
+  background: transparent !important;
+}
+.react-flow__edge-path {
+  stroke-width: 1.5;
+}
+.react-flow__controls {
+  background: #181b22 !important;
+  border: 1px solid #2f3542 !important;
+  box-shadow: none !important;
+}
+.react-flow__controls button {
+  background: #181b22 !important;
+  border-bottom: 1px solid #2f3542 !important;
+  color: #9ca3af !important;
+  fill: currentColor !important;
+}
+.react-flow__controls button:hover {
+  background: #232834 !important;
+  color: #f5b642 !important;
+}
+.react-flow__attribution {
+  display: none !important;
 }

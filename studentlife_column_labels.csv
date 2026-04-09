@@ -1,0 +1,133 @@
+column,label
+uid,Participant / date identifier
+date,Participant / date identifier
+window_start,"Fixed W-minute window open boundary (datetime, midnight-anchored)"
+sedentary_ratio,Proportion of window spent stationary (accelerometer — unknowns excluded)
+active_ratio,Proportion of window spent walking or running (accelerometer — unknowns excluded)
+dark_window_minutes,Dark sensor minutes within this window (all hours; NaN only in dead windows)
+unlocked_window_minutes,Phone unlocked minutes within this window (all hours; 0 in alive windows with no unlock activity)
+screen_time_window_minutes,Estimated screen-on minutes within this window (derived from dark + phonelock)
+avg_running_tasks_window,Mean running app tasks within this window slot (0 in alive windows with no readings)
+call_count,Phone calls within this window slot (call log — 0 in alive windows with no calls)
+call_duration_total,Total call duration within this window slot in seconds (call log)
+sms_count,SMS messages within this window slot — sent + received (0 in alive windows with no messages)
+mood_happy,"If you answered ""Yes"" on the first question, how happy do you feel?"
+mood_sad,"If you answered ""Yes"" on the third question, how sad do you feel?"
+mood_how,How are you right now?
+exercise_type,If you exercised how long did you exercise for?
+exercise_have,"Did you do vigorous exercise today (don't include walking) such as run, swim, cycle, play a sport"
+exercise_walk,How long did you walk for today?
+prev_day_events_positive,Think About Yesterday's Events. Rate the intensity of your Most Positive Events on a scale ranging from 1 (very weak)  to 7 (very intense).
+prev_day_events_negative,Rate the intensity of your Most Negative Events on a scale.
+productivity,Rate your productivity:
+prev_day_sleep_ema_hours,How many hours did you sleep last night?
+prev_day_sleep_ema_rating,How would rate your overall sleep last night?
+prev_day_sleep_ema_alertness,"How often did you have trouble staying awake yesterday while in class, eating meals or engaging in social activity?"
+stress_ema_level,"Right now, I am..."
+time_of_day,"Time-of-day label for window_start hour: late_night(0-6), early_morning(6-9), late_morning(9-12), afternoon(12-17), evening(17-21), night(21-24)"
+yesterday_nighttime_screen_minutes,Estimated screen-on minutes during previous night 20:00-02:00 (carry-forward from prior day)
+prev_evening_running_tasks,Mean running app tasks during previous evening 20:00-01:59 (carry-forward from prior day)
+prev_evening_peak_running_tasks,Peak running app tasks during previous evening 20:00-01:59 (carry-forward from prior day)
+prev_day_avg_running_tasks,Mean running app tasks on previous day (carry-forward from prior day)
+prev_day_peak_running_tasks,Peak running app tasks on previous day (carry-forward from prior day)
+prev_day_sedentary_ratio,Proportion of previous day spent stationary (carry-forward from prior day)
+prev_day_active_ratio,Proportion of previous day spent walking or running (carry-forward from prior day)
+prev_day_call_count,Total phone calls on previous day (carry-forward from prior day)
+prev_day_call_duration_total,Total call duration in seconds on previous day (carry-forward from prior day)
+prev_day_sms_count,Total SMS messages on previous day — sent + received (carry-forward from prior day)
+prev_day_total_screen_time_minutes,Estimated total screen-on minutes on previous day (carry-forward from prior day)
+prev_day_mood_happy,Last recorded happy rating on previous day (carry-forward from prior day)
+prev_day_mood_sad,Last recorded sad rating on previous day (carry-forward from prior day)
+prev_day_mood_how,Last recorded mood_how rating on previous day (carry-forward from prior day)
+prev_day_exercise_type,Last recorded exercise duration bucket on previous day (carry-forward from prior day)
+prev_day_exercise_have,Last recorded exercise binary flag on previous day (carry-forward from prior day)
+prev_day_exercise_walk,Last recorded deliberate walking flag on previous day (carry-forward from prior day)
+prev_day_productivity,Last recorded productivity rating on previous day (carry-forward from prior day)
+prev_day_stress_ema_level,Last recorded stress level on previous day (carry-forward from prior day)
+phq_interest,Little interest or pleasure in doing things
+phq_depressed,"Feeling down, depressed, hopeless."
+phq_sleep,"Trouble falling or staying asleep, or sleeping too much."
+phq_tired,Feeling tired or having little energy
+phq_appetite,Poor appetite or overeating
+phq_failure,Feeling bad about yourself or that you are a failure or have let yourself or your family down
+phq_concentrate,"Trouble concentrating on things, such as reading the newspaper or watching television"
+phq_psychomotor,Moving or speaking so slowly that other people could have noticed. Or the opposite being so figety or restless that you have been moving around a lot more than usual
+phq_death,"Thoughts that you would be better off dead, or of hurting yourself"
+pss_1,"1. In the last month, how often have you been upset because of something that happened unexpectedly?"
+pss_2,"2. In the last month, how often have you felt that you were unable to control the important things in your life?"
+pss_3,"3. In the last month, how often have you felt nervous and ""stressed""?"
+pss_4,"4. In the last month, how often have you felt confident about your ability to handle your personal problems?"
+pss_5,"5. In the last month, how often have you felt that things were going your way?"
+pss_6,"6. In the last month, how often have you found that you could not cope with all the things that you had to do?"
+pss_7,"7. In the last month, how often have you been able to control irritations in your life?"
+pss_8,"8. In the last month, how often have you felt that you were on top of things?"
+pss_9,"9. In the last month, how often have you been angered because of things that were outside of your control?"
+pss_10,"10. In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?"
+sleep_hours,"During the past month, how many hours of actual sleep did you get at night? (This may be different than the number of hours you spent in bed.)"
+sleep_quality_rating,"During the past month, how would you rate your sleep quality overall?"
+sleep_latency_mins,"During the past month, how long (in minutes) has it usually taken you to fall asleep each night?"
+sleep_trouble_30min,a. Cannot get to sleep within 30 minutes
+sleep_wakeup,b. Wake up in the middle of the night or early morning
+sleep_cough_snore,e. Cough or snore loudly
+sleep_bad_dreams,h. Have bad dreams
+pain_during_sleep,i. Have pain
+low_enthusiasm,"During the past month, how much of a problem has it been for you to keep up enthusiasm to get things done?"
+panas_interested,Interested
+panas_distressed,Distressed
+panas_upset,Upset
+panas_strong,Strong
+panas_scared,Scared
+panas_enthusiastic,Enthusiastic
+panas_active,Active
+panas_irritable,Irritable
+panas_alert,Alert
+panas_inspired,Inspired
+panas_nervous,Nervous
+panas_attentive,Attentive
+panas_jittery,Jittery
+panas_afraid,Afraid
+panas_proud,Proud
+panas_determined,Determined
+panas_guilty,Guilty
+panas_hostile,Hostile
+lonely_1,1. I feel in tune with the people around me
+lonely_2,2. I lack companionship
+lonely_3,3. There is no one I can turn to
+lonely_4,4. I do not feel alone
+lonely_5,5. I feel part of a group of friends
+lonely_6,6. I have a lot in common with the people around me
+lonely_7,7. I am no longer close to anyone
+lonely_8,8. My interests and ideas are not shared by those around me
+lonely_9,9. I am an outgoing person
+lonely_10,10. There are people I feel close to
+lonely_11,11. I feel left out
+lonely_12,12. My social relationships are superficial
+lonely_13,13. No one really knows me well
+lonely_14,14. I feel isolated from others
+lonely_15,15. I can find companionship when I want it
+lonely_16,16. There are people who really understand me
+lonely_17,17. I am unhappy being so withdrawn
+lonely_18,18. People are around me but not with me
+lonely_19,19. There are people I can talk to
+lonely_20,20. There are people I can turn to
+vr_general_health,"In general, would you say your health is"
+vr_moderate_activity,"Moderate activities, such as moving a table, pushing a vacuum cleaner, bowling or playing golf?"
+vr_climb_stairs,Climbing several flights of stairs?
+vr_physical_limit_work,Accomplished less than you would like.
+vr_physical_limit_kind,Were limited in the kind of work or other activities.
+vr_emotional_limit_work,Accomplished less than you would like..1
+vr_emotional_limit_care,Didn't do work or other activities as carefully as usual.
+vr_pain_interference,"During the past 4 weeks, how much did pain interfere with your normal work (including both work outside the home and housework)?"
+vr_energy,How much of the time during the past 4 weeks: Did you have a lot of energy?
+vr_downhearted,How much of the time during the past 4 weeks: Have you felt downhearted and blue?
+vr_social_interference,"During the past 4 weeks, how much of the time has your physical health or emotional problems interfered with your social activities (like visiting with friends, relatives, etc.)?"
+e_talkative,I see myself as someone who...   - 1. Is talkative
+n_depressed,"I see myself as someone who...   - 4. Is depressed, blue"
+e_reserved_r,I see myself as someone who...   - 6. Is reserved
+n_tense,I see myself as someone who...   - 14. Can be tense
+n_worries,I see myself as someone who...   - 19. Worries a lot
+e_quiet_r,I see myself as someone who...   - 21. Tends to be quiet
+n_stable_r,"I see myself as someone who...   - 24. Is emotionally stable, not easily upset"
+n_moody,I see myself as someone who...   - 29. Can be moody
+e_sociable,"I see myself as someone who...   - 36. Is outgoing, sociable"
+n_nervous,I see myself as someone who...   - 39. Gets nervous easily
